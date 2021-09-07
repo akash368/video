@@ -1,0 +1,276 @@
+::placeholder
+{
+    color: #24978F;
+}
+html 
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #EDEDED;
+}
+/*==============LAZY LOADER ===================*/
+
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: #242f3f;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+
+/*================= END =============*/
+.btn
+{
+    text-transform: none;
+    box-shadow: none;
+}
+.btn:hover
+{
+    box-shadow: none;
+}
+/*=============== NAVBAR STYLE ===========================*/
+
+nav .brand-logo
+{
+    margin-left: 10%;
+    color: #007A5C;
+}
+.logo
+{
+    height: 30px;
+    width: 35px;
+}
+
+nav
+{
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255,0.92);
+    box-shadow: 0 0 18px rgba(50, 64, 76,0.23);
+    position: fixed;
+    z-index: 1000;
+}
+nav ul
+{
+    margin-right: 5%;
+}
+nav ul li a
+{
+    margin-left: 20px;
+    color: black;
+    
+}
+nav ul li a:hover
+{
+    background-color:transparent;
+}
+.background
+{
+    font-size: 1.5rem;
+    color: #007A5C;
+    font-family: inherit;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+.login-btn
+{
+    margin-bottom: 1%;
+    width: calc(80% + 30px);
+    background-color: #007A5C;
+    padding: 7px;
+    height: 49px;
+}
+
+
+/*=============== NAVBAR STYLE END ===========================*/
+
+
+
+/*=============== HOME STYLE ===========================*/
+
+.banner-background
+{
+position:absolute;
+height:100%;
+width:100%;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.banner-background video
+{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+.video-content
+{
+height:100%;
+width:100%;
+box-shadow: 
+inset 132px 158px 283px -10px rgba(16, 21, 26,0.6), inset 119px 21px 393px 149px rgba(16, 21, 26,0.6); 
+z-index:998;
+}
+
+/*==================== HOME STYLE END ==============================*/
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+  
+    .sidenav
+    {
+        z-index: 1001;
+        width: 100%;
+    }
+    .sidenav li
+    {
+        display: flex;
+        justify-content: center;
+    }
+    nav .brand-logo
+    {
+        margin-left: 0;
+    }
+    .login-btn
+    {
+        position: absolute;
+        bottom: 130px;
+    }
+    .contact-btn
+    {
+        margin-bottom: 1%;
+        width: calc(80% + 30px);
+        background-color: transparent;
+        border: 3px solid #007A5C;
+        padding: 7px;
+        height: 49px;
+        position: absolute;
+        bottom: 65px;
+    }
+    .sidenav li>a.contact-btn
+    {
+        color: #007A5C;
+    }
+
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 830px) {
+    .sidenav
+    {
+        z-index: 1001;
+    
+    }
+    .login-btn
+    {
+        position: absolute;
+        bottom: 130px;
+    }
+    .contact-btn
+    {
+        margin-bottom: 1%;
+        width: calc(80% + 30px);
+        background-color: transparent;
+        border: 3px solid #007A5C;
+        padding: 7px;
+        height: 49px;
+        position: absolute;
+        bottom: 65px;
+    }
+    .sidenav li>a.contact-btn
+    {
+        color: #007A5C;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 830px) and (max-width: 992px) {
+    .sidenav
+    {
+        z-index: 1001;
+        
+    }
+    .login-btn
+    {
+        position: absolute;
+        bottom: 130px;
+    }
+    .contact-btn
+    {
+        margin-bottom: 1%;
+        width: calc(80% + 30px);
+        background-color: transparent;
+        border: 3px solid #007A5C;
+        padding: 7px;
+        height: 49px;
+        position: absolute;
+        bottom: 65px;
+    }
+    .sidenav li>a.contact-btn
+    {
+        color: #007A5C;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   
+    
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+   
+}
